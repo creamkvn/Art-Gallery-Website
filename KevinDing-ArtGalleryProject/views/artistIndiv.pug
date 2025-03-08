@@ -1,0 +1,23 @@
+html
+    head
+        title Artist
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        div#info
+            
+        div#main
+            div#left(class = "column left")
+                h3 Artist Name: #{artist.name}
+                
+            div#middle(class = "column middle") 
+                h3 Artist's Artwork:
+                each art in gallery
+                    a(href=`/gallery/${art._id}`) #{art.Title}
+                    br
+                
+            div#right(class = "column right")
+                h3 Follow
+                .button 
+                    button#comment2(type = "button" onclick="follow()") Follow
+        script(src="/follow.js")

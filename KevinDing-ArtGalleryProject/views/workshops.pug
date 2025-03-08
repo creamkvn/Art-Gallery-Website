@@ -1,0 +1,11 @@
+html
+    head
+        title Workshops
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        h1 Workshops Shortcuts:
+        each workshops in workshoplist
+            a(href=`/workshops/${workshops._id}`) #{workshops.name}
+            br
+            br

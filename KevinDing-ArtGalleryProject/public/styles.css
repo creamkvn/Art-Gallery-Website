@@ -1,0 +1,115 @@
+select {
+    position: absolute;
+    font-size: x-large;   
+
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 25%;
+    position: absolute;
+}
+
+.middle {
+    padding: 2vw;
+    right: 30%;
+    border: 10px outset yellow;
+    position: absolute;
+}
+
+.right {
+    border: 5px outset yellow;
+    padding: 1vw;
+    right: 1%;
+    position: absolute;
+}
+
+body {
+    background-color: grey;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+h4 {
+    font-size: 100px;
+}
+
+h5 {
+    font-size: 35px;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+}
+
+.submitButton {
+    border: 5px outset black;
+    background-color: white;
+    width: 10vw;
+}
+
+.home {
+    position: absolute;
+}
+
+h6 {
+    font-size: 80px;
+}
+
+.pages {
+    position: absolute;
+}
+
+/* Reset default browser styles */
+button,
+button:focus {
+  outline: none;
+  border: none;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2980b9;
+}
+
+.custom-div {
+    width: 25vw;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .custom-div h2 {
+    color: #333333;
+  }

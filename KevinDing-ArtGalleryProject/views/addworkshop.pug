@@ -1,0 +1,16 @@
+html
+    head
+        title Add Workshop
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        h1 Workshop name: 
+        input#workshopnname(type='text', name='workshopname')
+        h1 Description: 
+        input#description(type='text', name='description')
+        br
+        div.button
+            button#addworkshop(type = "button" onclick="addworkshop()") Add Workshop
+        br
+        br
+        script(src="/addworkshop.js")

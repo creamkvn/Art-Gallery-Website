@@ -1,0 +1,19 @@
+html
+    head
+        title Search
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        h1 Medium: 
+        input#medium(type='text', name='medium')
+        h1 Category: 
+        input#category(type='text', name='category')
+        br
+        div.button
+            button#search(type = "button" onclick="search()") Search
+        br
+        br
+        h3 Search Result:
+        div#result(class = "custom-div")
+
+        script(src="/search.js")

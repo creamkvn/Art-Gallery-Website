@@ -1,0 +1,35 @@
+html
+    head
+        title Artwork
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        div#info
+            
+        div#main
+            div#left(class = "column left")
+                h3 Title: #{art.Title}
+                h1 Artist: 
+                a(href=`/artists/${artist._id}`)  #{art.Artist}
+                h1 Year Created: #{art.Year}
+                h1 Category: #{art.Category}
+                h1 Medium: #{art.Medium}
+                h1 Description: #{art.Description}    
+                
+            div#middle(class = "column middle") 
+                h3 Like: #{like}
+                .button 
+                    button#like(type = "button" onclick="like()") Submit like
+                h3 Reviews:
+                each r in reviews
+                    h4  Comment: #{r.data}
+                    br
+                    br
+                
+            div#right(class = "column right")
+                img(src= art.Poster, alt='Art Work', width = 300 vw, height = 300 vw; position: "absolute")
+                h3 Add Comment
+                input#comment(type='text', name='comment')
+                .button 
+                    button#comment2(type = "button" onclick="comment()") Submit comment
+        script(src="/art.js")

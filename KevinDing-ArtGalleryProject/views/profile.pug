@@ -1,0 +1,54 @@
+html
+    head
+        title Profile
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        div#info
+            
+        div#main
+            div#left(class = "column left")
+                h3 Username: #{user.username}
+                if (user.accType)
+                    h3 Account Type: artist 
+                    a(href="/addWorkshop") Add Workshop
+                    | _
+                    a(href="/addGallery") Add Gallery
+        
+                else 
+                    h3 Account Type: patron
+
+                .button 
+                    button#logout(type = "button" onclick=`logout()`) Logout
+            div#middle(class = "column middle") 
+                h4 Like: 
+                each r in like
+                    div.custom-div
+                        h3  Art: #{r.art}
+                        .button 
+                            button#like(type = "button" onclick=`del('${r._id}')`) Remove like
+                h4 Reviews:
+                each r in reviews
+                    div.custom-div
+                        h3  Art: #{r.art}
+                        h3  Comment: #{r.data}
+                        .button 
+                            button#like(type = "button" onclick=`del('${r._id}')`) Remove review
+                        br
+                        br
+                    br
+                    br
+                h4 Following: 
+                each follow in follows
+                    div.custom-div
+                        h3 Artist Name: #{follow.following}
+                        .button 
+                            button#unfollow(type = "button" onclick=`unfollow('${follow._id}')`) Unfollow
+                        h3 Notification: 
+                        each r in follow.notification
+                            h3 #{r}
+            div#right(class = "column right")
+                h3 Switch Account
+                .button 
+                    button#comment2(type = "button" onclick="switchAcc()") Switch 
+        script(src="/profile.js")

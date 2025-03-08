@@ -1,0 +1,23 @@
+html
+    head
+        title Workshop
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        div#info
+            
+        div#main
+            div#left(class = "column left")
+                h3 Workshop Name: #{workshop.name}
+
+                h1 Description: #{workshop.description}    
+                
+            div#middle(class = "column middle")
+                h3 Enrolled Students
+                each a in workshop.enroll
+                    h3 #{a}
+            div#right(class = "column right")
+                h3 Enroll 
+                .button 
+                    button#enroll(type = "button" onclick="enroll()") Enroll
+        script(src="/enroll.js")

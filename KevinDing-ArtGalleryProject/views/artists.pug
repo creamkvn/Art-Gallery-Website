@@ -1,0 +1,11 @@
+html
+    head
+        title Artists
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        h1 Artists Shortcuts:
+        each artist in artistList
+            a(href=`/artists/${artist._id}`) #{artist.name}
+            br
+            br

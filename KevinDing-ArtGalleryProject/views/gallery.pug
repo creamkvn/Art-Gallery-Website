@@ -1,0 +1,11 @@
+html
+    head
+        title Gallery
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/shortcut
+        h1 Gallery Shortcuts:
+        each art in artList
+            a(href=`/gallery/${art._id}`) #{art.Title}
+            br
+            br
